@@ -1,0 +1,715 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(9, 75, 121, 1) 4%, rgba(0, 212, 255, 1) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* styling nav bar elements  */
+
+nav {
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(90deg, rgba(9, 75, 121, 1) 4%, rgba(0, 212, 255, 1) 100%);
+    border: 2px solid white;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 40px 3px rgb(13, 5, 255);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 1;
+}
+
+nav img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: 50px;
+}
+
+nav li h1 {
+    color: #fff;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+nav a:hover {
+    border-radius: 10px;
+    background-color: #f0f0f0;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+
+/* giving hover effect to texts of navbar seperately */
+.hideOnmobile a span {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+}
+
+.hideOnmobile a:hover span {
+    transform: scale(1.1);
+    letter-spacing: .1rem;
+    font-weight: bold;
+}
+
+/* styling logo  */
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+.logo a:hover {
+    background: transparent;
+
+}
+
+/* adding logo hover message  */
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    color: #080808;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    max-width: 250px;
+    top: 10px;
+    left: 60px;
+}
+
+.tooltip::before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 10px 10px 0px 10px;
+    border-color: #f1f1f1 transparent transparent transparent;
+    bottom: -10px;
+    left: 10px;
+}
+
+#logo:hover+.tooltip {
+    display: block;
+}
+
+/* hiding menu btn for bigger screens  */
+
+.menu-btn {
+    display: none;
+}
+
+
+/* styling sidebar  */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.201);
+    box-sizing: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: 1s ease-out;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+
+.sidebar a {
+    width: 100%;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.header img {
+    width: 250px;
+    height: 250px;
+    margin-top: 180px;
+    border-radius: 50%;
+    box-shadow: 0 0 40px 10px #0ff;
+}
+
+.header h1 {
+    color: #f5f5f5;
+    font-size: 80px;
+    font-weight: 600;
+}
+
+.header h2 {
+    margin-top: -40px;
+    color: #f5f5f5;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.header p {
+    color: #f5f5f5;
+    font-size: 15px;
+}
+
+.our-projects {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.our-projects h2 {
+    color: #f5f5f5;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.our-projects-content {
+    text-align: center;
+}
+
+.our-projects-content .big-wrappers {
+    display: flex;
+    justify-content: center;
+}
+.wrapper-3 {
+    box-sizing: border-box;
+    border-radius: 25px;
+    margin: 10px 10px 10px 10px;
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 1px #fff;
+    background: transparent;
+    width: 640px;
+    height: 540px;
+    transition: all .3s ease-in-out;
+}
+
+.wrapper-3:hover {
+    transform: translate3d(0px, -10px, 0px);
+}
+
+.wrapper-3 img {
+    width: 610px;
+    height: 320px;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+
+.wrapper-3 a {
+    color: #f0f0f0;
+    font-size: 15px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.wrapper-3 h3 {
+    margin-top: 0;
+    font-size: 25px;
+    color: black;
+}
+
+.wrapper-3 li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 10px;
+    bottom: 0;
+    margin-bottom: 10px;
+}
+
+.wrapper-3 .developer-name {
+    width: 200px;
+    height: 60px;
+    margin-top: 0;
+}
+
+.wrapper-3 .developer-name .below {
+    position: absolute;
+    bottom: 25px;
+    left: 30px;
+    color: #fff;
+}
+
+.wrapper-3 .visit-site-btn {
+    height: 60px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: rgb(0, 157, 255);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    margin-right: 10px;
+    margin-top: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.wrapper-3 .visit-site-btn:hover {
+    color: rgb(0, 81, 255);
+    background-color: #fff;
+}
+
+.small-wrappers {
+    box-sizing: border-box;
+    border-radius: 25px;
+    margin: 50px 10px 100px 10px;
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 1px #fff;
+    background: transparent;
+    width: 320px;
+    height: 380px;
+    bottom: 0;
+    transition: all .3s ease-in-out;
+}
+
+.small-wrappers:hover {
+    transform: translate3d(0px, -10px, 0px);
+}
+
+.small-wrappers img {
+    width: 305px;
+    height: 160px;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+
+.small-wrappers a {
+    color: #f0f0f0;
+    font-size: 12px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.small-wrappers h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: black;
+}
+
+.small-wrappers li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 10px;
+    bottom: 0;
+}
+
+.small-wrappers .developer-name {
+    width: 200px;
+    height: 60px;
+    margin-top: 0;
+}
+
+.small-wrappers .developer-name .below {
+    position: absolute;
+    bottom: 25px;
+    left: 30px;
+    color: #fff;
+}
+
+.small-wrappers .visit-site-btn {
+    height: 60px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: rgb(0, 157, 255);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.small-wrappers .visit-site-btn:hover {
+    color: rgb(0, 81, 255);
+    background-color: #fff;
+}
+
+.show-more-projects {
+    background-color: rgb(0, 157, 255);
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    box-sizing: border-box;
+    padding: 5px 5px 5px 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 3px rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-bottom: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.show-more-projects:hover {
+    transform: translate3d(0px, -10px, 0px);
+    color: rgb(0, 81, 255);
+    background-color: #fff;
+}
+
+/* Blog */
+
+.blog-heading {
+    font-size: 30px;
+    font-weight: 600;
+    color: #f0f0f0;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#blog-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 8vw;
+}
+
+#blog-container .blogs {
+    width: 60%;
+}
+
+#blog-container .blogs img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#blog-container .blogs .post {
+    margin-bottom: 60px;
+}
+
+#blog-container .blogs .post h3 {
+    color: #080808;
+    padding: 15px 0 10px 0;
+}
+
+#blog-container .blogs .post p {
+    color: #1d1f22;
+    padding: 20px;
+}
+
+#blog-container .blogs .post a {
+    color: #fff;
+    background-color: rgb(21, 21, 100);
+    font-size: 0.9rem;
+    text-decoration: none;
+    padding: 13px 35px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+#blog-container .blogs .post a:hover {
+    color: rgb(21, 21, 100);
+    background-color: #fff;
+    font-weight: 400;
+}
+
+#blog-container .cate {
+    width: 30%;
+}
+
+#blog-container .cate h2 {
+    padding-bottom: 7px;
+}
+
+#blog-container .cate a {
+    text-decoration: none;
+    color: #e1d7d7;
+    font-weight: 500;
+    line-height: 45px;
+}
+
+#blog-container .blogpost {
+    width: 60%;
+    margin: 0 auto;
+}
+
+#blog-container .blogpost p {
+    text-align: justify;
+    padding-bottom: 60px !important;
+}
+
+
+/* Footer Section */
+.footer {
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.footer .box-container {
+    margin-left: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer .box-container .box {
+    flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3 {
+    color: #333;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+
+.footer .box-container .box a {
+    display: block;
+    text-decoration: none;
+    margin-left: 2.2rem;
+    color: #666;
+    font-size: 1rem;
+    padding: 1rem 0;
+    transition: .1s;
+}
+
+
+.footer .box-container .box a:hover {
+    color: green;
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+.footer .credit {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 2.5rem;
+    font-size: 1rem;
+    color: #080808;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+}
+
+.footer .credit span {
+    color: green;
+}
+
+/* ----------------------------------------------------------------media queries----------------------------------------------------------- */
+
+
+/* hiding navbar btns and showing menu btn in smaller screens  */
+
+@media(min-width:1390px) {
+    .wrapper-3 {
+        width: 540px;
+        height: 440px;
+    }
+
+    .wrapper-3 img {
+        width: 510px;
+        height: 220px;
+    }
+}
+
+@media(max-width: 1024px) {
+    .wrapper-3 {
+        width: 440px;
+        height: 460px;
+    }
+
+    .wrapper-3 img {
+        width: 410px;
+        height: 220px;
+    }
+
+    .small-wrappers {
+        margin-bottom: 0;
+    }
+
+    .show-more-projects {
+        margin-top: 50px;
+        font-size: 25px;
+    }
+}
+
+@media(max-width: 768px) {
+
+    .hideOnmobile {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .wrapper-3 {
+        width: 340px;
+        height: 380px;
+    }
+
+    .wrapper-3 img {
+        width: 310px;
+        height: 180px;
+    }
+
+    .wrapper-3 h3 {
+        font-size: 20px;
+        padding: 0 2px 0 2px;
+    }
+
+    .small-wrappers {
+        width: 240px;
+        height: 320px;
+        margin-bottom: 0;
+    }
+
+    .small-wrappers img {
+        width: 210px;
+        height: 130px;
+    }
+
+    .small-wrappers h3 {
+        font-size: 15px;
+        padding: 0 2px 0 2px;
+    }
+
+    .show-more-projects {
+        margin-top: 50px;
+        font-size: 20px;
+    }
+
+}
+
+@media(max-width: 450px) {
+    .header img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .header h1 {
+        font-size: 50px;
+    }
+    
+    .big-wrappers {
+        margin: 50px 0px 0px 0px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .wrapper-3,
+    .small-wrappers {
+        width: 240px;
+        height: 320px;
+        margin-bottom: 30px;
+    }
+
+    .wrapper-3 img,
+    .small-wrappers img {
+        width: 210px;
+        height: 130px;
+    }
+
+    .wrapper-3 h3,
+    .small-wrappers h3 {
+        font-size: 15px;
+        padding: 0 2px 0 2px;
+    }
+
+    .small-wrappers {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+    .show-more-projects {
+        font-size: 10px;
+    }
+
+    nav li h1 {
+        font-size: 18px;
+    }
+
+    #blog-container {
+        flex-direction: column;
+    }
+
+    #blog-container .blogs,
+    #blog-container .cate {
+        width: 100%;
+    }
+}
+
+/* making sidebar cover full screen*/
+
+@media(max-width: 476px) {
+    .our-projects {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+}
+
+/* resizing logo text  */
+
+@media screen and (max-width: 512px) {
+    .our-projects {
+        display: block;
+    }
+
+    .logo a {
+        font-size: 1rem;
+    }
+
+    #tooltip {
+        display: none;
+    }
+
+}
